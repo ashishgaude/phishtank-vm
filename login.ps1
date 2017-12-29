@@ -1,5 +1,4 @@
-$username = "ashish@numinolabs.com"
-$securePassword = ConvertTo-SecureString -String "xxx-xxx" -AsPlainText -Force
+$securePassword = ConvertTo-SecureString -String $args[1] -AsPlainText -Force
 
-$cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+$cred = New-Object System.Management.Automation.PSCredential ($args[0], $securePassword)
 Add-AzureRmAccount -Credential $cred
