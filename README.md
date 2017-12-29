@@ -1,6 +1,4 @@
-"# phishtank-vm" 
-
-#steps:
+#  phishtank-agent
 
 Create a new VM (current configurations are ) 8GB with 2 CPUS
 Install git
