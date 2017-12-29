@@ -11,8 +11,8 @@ $osDiskName = "phishtankOSDisk"
 $virtualNetworkName = 'phishtank-vmVNET'
 $virtualMachineSize = 'Standard_D8_v3'
 
-$username = "ashish@numinolabs.com"
-$securePassword = ConvertTo-SecureString -String "xxx-xxx" -AsPlainText -Force
+$username = args[0]
+$securePassword = ConvertTo-SecureString -String args[1] -AsPlainText -Force
 
 
 # login to Azure
