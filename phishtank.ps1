@@ -11,11 +11,13 @@ $osDiskName = "phishtankOSDisk"
 $virtualNetworkName = 'phishtank-vmVNET'
 $virtualMachineSize = 'Standard_D8_v3'
 
-$username = args[0]
-$securePassword = ConvertTo-SecureString -String args[1] -AsPlainText -Force
+$username = $args[0]
+$securePassword = ConvertTo-SecureString -String $args[1] -AsPlainText -Force
 
 
 # login to Azure
 $cred = New-Object System.Management.Automation.PSCredential ($username, $securePassword)
+echo "Login in to Azure:"
 Add-AzureRmAccount -Credential $cred
+echo "Setting up the subscription to " $subscriptionId
 Set-AzureRMContext -SubscriptionId $subscriptionId
